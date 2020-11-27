@@ -13,8 +13,7 @@
     "target": "es2015",
     "module": "es2020",
     "resolveJsonModule": true,
-"esModuleInterop": true,
-"allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "lib": [
       "es2018",
       "dom"

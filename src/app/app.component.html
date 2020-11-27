@@ -5,10 +5,8 @@
   <div class="row">
     <div class="col-md-6">
 
-      <select value="countries" class="form-control">
-        <option name="default" id="country">country1</option>
-        <option name="default" id="country">country2</option>
-        <option name="default" id="country">country3</option>
+      <select   value="countries" class="form-control" (change)='stateChanged($event)'>
+        <option  *ngFor="let x of statesArray.states" name="" value="{{x.state}}">{{x.state}}</option>
       </select>
       <p></p>
      </div>
@@ -16,9 +14,7 @@
   <div class="row">
     <div class="col-md-6">
       <select name="districts" id="" class="form-control">
-        <option value="dist">Dist 1</option>
-        <option value="dist">Dist 2</option>
-        <option value="dist">Dist 3</option>
+        <option value="dist"></option>
       </select>
     </div>
 
@@ -28,4 +24,7 @@
     </div>
   </div>
 </div>
-<router-outlet></router-outlet>
+<!-- {{statesArray.states| json}} -->
+<div >
+
+</div>

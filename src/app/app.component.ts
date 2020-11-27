@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Pipe } from '@angular/core';
 
-import data from './_files/data.json';
+
+import data from '../assets/data.json';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,20 @@ import data from './_files/data.json';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'gmap';
-
-
+  statesArray:any = data;
+  selectedState:any;
+  states:any;
+  districts:any;
+   constructor() {
+    
+   }
+  public stateChanged(state){
+  this.selectedState = state.target.value;
+  this.states = this.statesArray.states;
+  console.log(this.states);
+  console.log(this.selectedState);
+  }
+  
 }
