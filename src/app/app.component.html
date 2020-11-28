@@ -6,15 +6,18 @@
     <div class="col-md-6">
 
       <select   value="countries" class="form-control" (change)='stateChanged($event)'>
-        <option  *ngFor="let x of statesArray.states" name="" value="{{x.state}}">{{x.state}}</option>
+        <option selected>--Select a state</option>
+        <option  *ngFor="let item of statesArray.states" name="" value="{{item.state}}" >{{item.state}}</option>
       </select>
       <p></p>
      </div>
   </div>
   <div class="row">
     <div class="col-md-6">
-      <select name="districts" id="" class="form-control">
-        <option value="dist"></option>
+
+      <select   value="districts" class="form-control">
+        <option selected>--Select a district</option>
+        <option  *ngFor="let item of districts" name="" value="{{item}}" >{{item}}</option>
       </select>
     </div>
 

@@ -13,16 +13,19 @@ export class AppComponent {
   title = 'gmap';
   statesArray:any = data;
   selectedState:any;
-  states:any;
+  state:any;
   districts:any;
+  index:any;
    constructor() {
     
    }
   public stateChanged(state){
   this.selectedState = state.target.value;
-  this.states = this.statesArray.states;
-  console.log(this.states);
-  console.log(this.selectedState);
+  this.index = state.currentTarget.options.selectedIndex;
+  this.state = this.statesArray.states[this.index];
+  this.districts=this.statesArray.states[this.index].districts;
+  console.log(this.districts);
+
   }
   
 }
