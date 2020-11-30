@@ -10,12 +10,9 @@
         <option  *ngFor="let item of statesArray.states" name="" value="{{item.state}}" >{{item.state}}</option>
       </select>
       <p></p>
-     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
+    
 
-      <select   value="districts" class="form-control">
+      <select   value="districts" class="form-control" (change)='districtSelected($event)'>
         <option selected>--Select a district</option>
         <option  *ngFor="let item of districts" name="" value="{{item}}" >{{item}}</option>
       </select>
@@ -23,11 +20,15 @@
 
 
     <div class="col-md-6">
-      place map here
+      <h4 class="text-center">Google Map</h4>
+        <div class="card mt-3">
+            <div class="card-body">
+              <agm-map [zoom]="10" [latitude]="lat" [longitude]="lng"></agm-map>
+
+            </div>
+        </div>
     </div>
   </div>
 </div>
-<!-- {{statesArray.states| json}} -->
 <div >
 
-</div>
